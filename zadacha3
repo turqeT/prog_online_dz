@@ -1,0 +1,18 @@
+#zadacha3
+package com.gmail.turq;
+
+import java.util.Scanner;
+
+public class Zadacha23 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		double L;
+		System.out.println("Введите, пожалйста, радиус круга");
+		double R=sc.nextDouble() ;
+		L=2*Math.PI*R;
+		System.out.println("Длина круга равна = " + L);
+	}
+
+}
