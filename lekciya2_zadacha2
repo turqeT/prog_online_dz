@@ -1,0 +1,29 @@
+#zadacha2
+package com.gmail.turq;
+
+import java.util.Scanner;
+
+
+public class Zadacha22 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Введите значение стороны a");
+		double a=sc.nextDouble();
+		System.out.println("Введите значение стороны b");
+		double b=sc.nextDouble();
+		System.out.println("Введите значение стороны c");
+		double c=sc.nextDouble();
+		
+		double p=(a+b+c)/2.0;
+		double S=(p*(p-a)*(p-b)*(p-c));
+		S=Math.sqrt(S);
+		System.out.println("Площадь треугольника = " + S);
+	}
+
+	
+	
+	
+
+}
