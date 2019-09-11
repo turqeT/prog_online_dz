@@ -1,0 +1,61 @@
+#zadacha 2
+package com.gmail.turq;
+
+import java.util.Scanner;
+
+public class Lesson3dz2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Введите номер квартиры");
+		int number = sc.nextInt();
+		int floar = 0;
+		int padik = 0;
+
+		if (number > 0 && number <= 36 && number < 144) {
+			padik = 1;
+		} else if (number > 36 && number <= 72) {
+			padik = 2;
+		} else if (number > 72 && number <= 108) {
+			padik = 3;
+		} else if (number > 108 && number <= 144)
+			padik = 4;
+
+		if ((number <= 4) || (number > 36 && number <= 40) || (number > 72 && number <= 76)
+				|| (number > 108 && number <= 112) ) {
+			floar = 1;
+		} else if ((number > 5 && number <= 8) || (number > 40 && number <= 44) || (number > 76 && number <= 80)
+				|| (number > 112 && number <= 116)) {
+			floar = 2;
+		} else if ((number > 8 && number <= 12) || (number > 44 && number <= 48) || (number > 80 && number <= 84)
+				|| (number > 116 && number <= 120)) {
+			floar = 3;
+		} else if ((number > 12 && number <= 16) || (number > 48 && number <= 52) || (number > 84 && number <= 88)
+				|| (number > 120 && number <= 124)) {
+			floar = 4;
+		} else if ((number > 16 && number <= 20) || (number > 52 && number <= 56) || (number > 88 && number <= 92)
+				|| (number > 124 && number <= 128)) {
+			floar = 5;
+		} else if ((number > 20 && number <= 24) || (number > 56 && number <= 60) || (number > 92 && number <= 96)
+				|| (number > 128 && number <= 132)) {
+			floar = 6;
+		} else if ((number > 24 && number <= 28) || (number > 60 && number <= 64) || (number > 96 && number <= 100)
+				|| (number > 132 && number <= 136)) {
+			floar = 7;
+		} else if ((number > 28 && number <= 32) || (number > 64 && number <= 68) || (number > 100 && number <= 104)
+				|| (number > 136 && number <= 140)) {
+			floar = 8;
+		} else if ((number > 32 && number <= 36) || (number > 68 && number <= 72) || (number > 104 && number <= 108)
+				|| (number > 140 && number <= 144))
+			floar = 9;
+
+		if (floar == 0 && padik == 0 && number > 144) {
+			System.out.println("Такой квартиры нету в этом доме");
+		} else
+		System.out.println("Ваша квартира находиться на " + floar + " этаже, в подъезде под номером " + padik);
+		
+		
+
+	}
+
+}
