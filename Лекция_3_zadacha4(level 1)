@@ -1,0 +1,25 @@
+#zadacha4
+package com.gmail.turq;
+
+import java.util.Scanner;
+
+public class Lesson3dz4 {
+
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Input a");
+		int a = sc.nextInt();
+		System.out.println("Input b");
+		int b = sc.nextInt();
+		System.out.println("Input c");
+		int c = sc.nextInt();
+		String truk;
+		if (((a+b)>=c) && ((a+c)>=b) && ((b+c)>=a)) {
+			truk="существует";
+		}
+		else truk="не существует";
+		System.out.println("Такой треугольник " + truk);
+	
+	}
+
+}
