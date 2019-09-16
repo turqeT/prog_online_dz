@@ -1,0 +1,23 @@
+#zadacha 2
+package com.gmail.turq;
+
+import java.util.Scanner;
+
+public class Zadacha2 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Input n");
+		int num = sc.nextInt();
+		int f = 1;
+
+		if ((num < 4) || (num > 16)) {
+			System.out.println("numer is`nt correct");
+		} else {
+			for (int i = 1; i <= num; i++) {
+				f *= i;
+			}
+			System.out.println("Faktorial = " + f);
+		}
+	}
+}
