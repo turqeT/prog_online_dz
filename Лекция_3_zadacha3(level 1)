@@ -1,6 +1,5 @@
 #zadacha3
 package com.gmail.turq;
-
 import java.util.Scanner;
 
 public class Lesson3dz3 {
@@ -12,12 +11,16 @@ public class Lesson3dz3 {
 		int days = 0;
 		String god;
 		god = "высокосный";
-		if ((year % 400 == 0) || (year % 4 == 0)) {
+		
+		if ((year % 400 == 0) || (year % 4 == 0) ) {
 			days = 366;
 		} else {
 			days = 365;
 		god = "не " + god;
-		}
+		}if (year%100==0)
+			days=365;
+		god="не высокосный";
+		
 				System.out.println("В этом году " + days + " дней. Он " + god);
 	}
 
