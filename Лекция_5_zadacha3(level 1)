@@ -1,0 +1,28 @@
+#Zadacha 3
+package com.gamil.turq;
+
+import java.util.Arrays;
+
+public class Zadacha3 {
+
+	public static void main(String[] args) {
+		int[] array = new int[15];
+		for (int i = 0; i < array.length; i++) {
+			array[i] = 1 + (int) (Math.random() * 15);
+		}
+		System.out.println(Arrays.toString(array));
+
+		int[] arrayTwo = Arrays.copyOf(array, 30);
+
+		System.arraycopy(array, 0, arrayTwo, 15, array.length);
+
+		for (int i = 15; i < arrayTwo.length; i++) {
+			arrayTwo[i] = arrayTwo[i] * 2;
+		}
+
+		System.out.println();
+
+		System.out.println(Arrays.toString(arrayTwo));
+	}
+
+}
