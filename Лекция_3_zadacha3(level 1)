@@ -1,26 +1,29 @@
-#zadacha3
-package com.gmail.turq
+package com.gmail.turq;
+
+import java.util.Scanner;
+
 public class Lesson3dz3 {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("Введите год");
 		int year = sc.nextInt();
-		int days = 0;
+		int days = 365;
 		String god;
-		god = "высокосный";
-		
-		if ((year % 400 == 0) || (year % 4 == 0) ) {
-			days = 366;
-		} else {
-			days = 365;
-		god = "не " + god;
-		}if (year==100) {
-			days=365;
 		god="не высокосный";
+		
+		
+		if ((year%4)==0) {
+			if ((year%400)==0) {
+				days=366;
+				god="высокосный";
+			}
+			if (year%100!=0) {
+				days=366;
+				god="высокосный";
+			}
 		}
 				System.out.println("В этом году " + days + " дней. Он " + god);
 	}
 
 }
-
