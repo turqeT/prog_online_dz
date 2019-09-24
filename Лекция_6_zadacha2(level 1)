@@ -1,0 +1,21 @@
+#Zadacha 2
+package com.gmail.turq;
+
+public class Zadacha2 {
+
+	public static void main(String[] args) {
+		String a = "Turqet";
+		int b = 3;
+		double c = 7.3;
+
+		String concant = getConcant(a, b, c);
+		System.out.println(concant);
+	}
+
+	public static String getConcant(String a, int b, double c) {
+		String d = a + b + c;
+
+		return d;
+
+	}
+}
