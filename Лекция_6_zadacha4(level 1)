@@ -1,0 +1,32 @@
+#Zadacha4
+package com.gmail.turq;
+
+public class Zadacha4 {
+
+	public static void main(String[] args) {
+		int[] array = { 0, 4, 6, 7, 0, 2, 3, 5, 7, 9 };
+		int a = 8;
+		int d = findElement(array, a);
+		System.out.println(d);
+	}
+
+	public static int findElement(int[] array, int element) {
+		int d = -1;
+
+		for (int i = 0; i < array.length; i++) {
+
+			if (array[i] == element) {
+				d = i;
+				System.out.println(i);
+			}
+
+			if (d != -1) {
+				d = element;
+				return d;
+
+			}
+		}
+		return d;
+
+	}
+}
