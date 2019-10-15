@@ -1,0 +1,30 @@
+#Zadacha 3
+package com.gmail.turq;
+
+import java.util.Scanner;
+
+public class Zadacha3 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		StringBuilder sb = new StringBuilder();
+		System.out.println("Input number");
+		String number = sc.nextLine();
+		System.out.println(number);
+		sb.append(number);
+		sb.reverse();
+
+		number = sb.toString();
+		char[] array = number.toCharArray();
+
+		int num = 0;
+		for (int i = 0; i < array.length; i++) {
+			if (array[i] == '1') {
+				num += (int) (Math.pow(2, i));
+			}
+		}
+		System.out.println(num);
+
+	}
+
+}
