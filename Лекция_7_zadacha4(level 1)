@@ -1,0 +1,17 @@
+#Zadacha 4
+package com.gmail.turq;
+
+public class Zadacha4 {
+
+	public static void main(String[] args) {
+
+		for (int n = 2; n < 12; n++) {
+
+			String text = String.format("PI" + " = %." + n + "f", Math.PI);
+
+			System.out.println(text);
+
+		}
+
+	}
+}
