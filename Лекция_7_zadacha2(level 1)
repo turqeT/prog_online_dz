@@ -1,0 +1,26 @@
+#Zadacha 2
+package com.gmail.turq;
+
+public class Zadacha2 {
+
+	public static void main(String[] args) {
+		int[] array = { 1, 3, 5, 7, 9 };
+		String a = stringArray(array);
+		System.out.println(a);
+	}
+
+	public static String stringArray(int[] array) {
+		StringBuilder sb = new StringBuilder("[");
+
+		for (int i : array) {
+			sb.append(i);
+			sb.append(", ");
+		}
+		sb.append("]");
+		sb.delete(sb.length() - 3, sb.length() - 1);
+
+		String text = sb.toString();
+		return text;
+	}
+
+}
