@@ -1,0 +1,28 @@
+#Zadaccha 1
+package com.gmail.turq;
+
+import java.util.Calendar;
+import java.util.Date;
+
+public class Zadacha1 {
+
+	public static void main(String[] args) {
+		Calendar cl = Calendar.getInstance();
+		long dateResult = 0L;
+		cl.set(Calendar.YEAR, 2019);
+		cl.set(Calendar.MONTH, 9);
+		cl.set(Calendar.DAY_OF_MONTH, 13);
+		Date date = cl.getTime();
+
+		Calendar c2 = Calendar.getInstance();
+		c2.set(Calendar.YEAR, 2019);
+		c2.set(Calendar.MONTH, 8);
+		c2.set(Calendar.DAY_OF_MONTH, 13);
+		Date date1 = c2.getTime();
+
+		dateResult = (date.getTime()) - (date1.getTime());
+
+		System.out.println(dateResult);
+	}
+
+}
