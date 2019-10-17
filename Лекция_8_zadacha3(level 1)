@@ -1,0 +1,21 @@
+#Zadacha 3
+package com.gmail.turq;
+
+import java.io.File;
+
+public class Zadacha3 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		File fileOne = new File(".");
+		folder(fileOne);
+		
+	}
+	public static void folder(File file) {
+	File [] arrayFile = file.listFiles();
+	for (File row : arrayFile) {
+		System.out.println(row);
+		
+		}
+	}
+}
