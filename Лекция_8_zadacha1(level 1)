@@ -1,0 +1,45 @@
+#Zadacha 1
+package com.gmail.turq;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+public class Zadacha1 {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		File file = new File("dz.txt");
+
+		StringBuilder sb = new StringBuilder();
+    
+		try {
+			file.createNewFile();
+		} catch (IOException e) {
+			System.out.println(e);
+		}
+    
+		String text = "";
+		for (; text.compareTo("stop") != 0;) {
+			text = sc.nextLine();
+			if (text.compareTo("stop") != 0) {
+				sb.append(text);
+				sb.append(System.lineSeparator());
+			}
+		}
+		sc.close();
+		saveTextToFile(sb.toString(), file);
+
+	}
+
+	public static void saveTextToFile(String text, File file) {
+		try (PrintWriter pw = new PrintWriter(file)) {
+			pw.println(text);
+		} catch (IOException e) {
+			System.out.println(e);
+		}
+
+	}
+
+}
