@@ -1,0 +1,25 @@
+#Zadacaha 1
+package com.gmail.turq;
+
+public class Main {
+	public static void main(String[] args) {
+
+		Cat catOne = new Cat();
+		catOne.setAge(10);
+		catOne.setColor("Brown");
+		catOne.setBreed("Finnish");
+		catOne.setWeight(12.7);
+		catOne.relax(7);
+		System.out.println(catOne);
+		Cat catTwo = new Cat("Red", 11, 11.3, "Norwegian");
+
+		catTwo.relax(6);
+		Cat catThree = new Cat("Black", 9, 13.4, "Chinese");
+		catThree.relax(5);
+		;
+		System.out.println(catTwo);
+		System.out.println(catThree);
+
+	}
+
+}
