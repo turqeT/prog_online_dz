@@ -39,9 +39,10 @@ public class Main {
 		gp.deleteStudent(7);
 		System.out.println(six.getSecondName());
 		gp.addStudent(five, 8);
+
 		gp.groupInform();
+		System.out.println(gp.findStudent("Jora"));
 		System.out.println();
-		gp.findStudent("Jora");
 		System.out.println(gp.toString());
 		System.out.println(Arrays.toString(gp.comp()));
 
