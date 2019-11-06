@@ -1,0 +1,66 @@
+#Zadacha 4
+package com.gmail.turq;
+
+import java.util.Arrays;
+
+public class Main {
+
+	public static void main(String[] args) throws MyException {
+		Student one = new Student(18, 65.3, 1.76, true, "Petro", "Rakitsky");
+		Student two = new Student(19, 67.3, 1.73, true, "Misha", "Zakitsky");
+		Student three = new Student(22, 68.7, 1.70, false, "Yulia", "Savicheva");
+		Student four = new Student(21, 70.3, 1.21, false, "Evhen", "Lakitsky");
+		Student five = new Student(20, 90.2, 1.60, true, "Alex", "Chakitsky");
+		Student six = new Student(19, 75.4, 1.86, false, "Anna", "Karenina");
+		Student eight = new Student(21, 64.8, 1.91, true, "Dima", "Jora");
+		Student seven = new Student(17, 65.8, 1.89, true, "Artur", "Tosky");
+		Student nine = new Student(19, 65.3, 1.75, true, "Kolya", "Arasak");
+		Student eleven = new Student(22, 55.8, 1.9, true, "Anton", "Takit");
+		Student ten = new Student(24, 75.8, 1.90, true, "Yura", "Borman");
+
+		Group gp = new Group();
+
+		try {
+			gp.addStudent(eleven, 2);
+			gp.addStudent(ten, 9);
+			gp.addStudent(nine, 4);
+			gp.addStudent(eight, 4);
+			gp.addStudent(seven, 6);
+			gp.addStudent(six, 1);
+			gp.addStudent(seven, 0);
+			gp.addStudent(three, 3);
+			gp.addStudent(four, 5);
+			gp.addStudent(two, 7);
+			gp.addStudent(six, 13);
+			gp.addStudent(five, 8);
+		} catch (MyException e) {
+			System.out.println(e.getMessage());
+		}
+
+		Student[] studentArray = new Student[] { two, three, four, five, six, eight, seven, nine, eleven, ten };
+		for (Student student : studentArray) {
+			System.out.println(student);
+		}
+		System.out.println();
+		Arrays.sort(studentArray);
+		for (Student student : studentArray) {
+			System.out.println(student);
+		}
+		gp.deleteStudent(7);
+		System.out.println(six.getSecondName());
+		gp.addStudent(five, 8);
+
+		gp.groupInform();
+		System.out.println(gp.findStudent("Jora"));
+		System.out.println();
+		System.out.println(gp.toString());
+		System.out.println(Arrays.toString(gp.comp()));
+		
+		System.out.println(gp.addStudent());
+		System.out.println();
+
+		gp.getReady();
+		
+	}
+
+}
