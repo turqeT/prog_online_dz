@@ -60,7 +60,8 @@ public class Main {
 		System.out.println();
 
 		gp.getReady();
-		
+		gp.sortByParametr(5, true);
+		System.out.println(gp);
 	}
 
 }
